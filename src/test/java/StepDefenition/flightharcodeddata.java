@@ -20,7 +20,7 @@ public class flightharcodeddata  extends BrowserDriver{
 	}
 
 	@When("i select Date as follow {string}")
-	public void i_select_date_as_follow(String date) {
+	public void i_select_date_as_follow(String date) throws InterruptedException {
 		SearchPage sp = new SearchPage(browser);
 		sp.SelectDate(date);
 	}

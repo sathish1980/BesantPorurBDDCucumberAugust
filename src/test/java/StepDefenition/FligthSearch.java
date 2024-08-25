@@ -24,7 +24,7 @@ public class FligthSearch extends BrowserDriver{
 		launchTheBrowser();
 		String urls = PropertyFileRead.ReadEnvData().getProperty("url");
 		browser.get(urls);
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 	}
 
 	@When("i see a popup please close it")
@@ -49,7 +49,7 @@ public class FligthSearch extends BrowserDriver{
 	}
 
 	@When("i select Date")
-	public void i_select_date() {
+	public void i_select_date() throws InterruptedException {
 		SearchPage sp = new SearchPage(browser);
 		sp.SelectDate("30");
 	}

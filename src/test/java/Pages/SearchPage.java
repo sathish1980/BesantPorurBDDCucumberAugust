@@ -20,8 +20,9 @@ public class SearchPage extends CommonElements{
 	public void ClickOnFrom() throws InterruptedException
 	{
 		WaitForElementtobeClickable(browser,By.xpath("//*[@for='fromCity']"),60);
-		Thread.sleep(5000);
+
 		ClickOnButton(browser.findElement(By.xpath("//*[@for='fromCity']")));	
+		Thread.sleep(2000);
 	}
 	
 	public void GetDataFromList(String expectedCountry)
@@ -47,8 +48,9 @@ public class SearchPage extends CommonElements{
 		ClickOnButton(browser.findElement(By.cssSelector("[for=toCity]")));	
 	}
 	
-	public void SelectDate(String expectedDate)
+	public void SelectDate(String expectedDate) throws InterruptedException
 	{
+		Thread.sleep(2000);
 		List<WebElement> allWeeks = browser.findElements(By.xpath("(//*[@class='DayPicker-Months']//div[@class='DayPicker-Month'])[last()]//div[@class='DayPicker-Week']"));
 		for(WebElement eachWeek : allWeeks)
 		{
@@ -60,6 +62,7 @@ public class SearchPage extends CommonElements{
 				if(!(className.contains("outside")||className.contains("disabled")||className.contains("selected")))
 				{
 					String actualDate =eachday.findElement(By.tagName("p")).getText();
+					System.out.println(actualDate);
 					if(actualDate.equalsIgnoreCase(expectedDate))
 					{
 						eachday.click();
