@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class PropertyFileRead {
 	
-	static String filpath = "C:\\Users\\kumar\\eclipse-workspace\\BesantPorurSeleniumJuly2024\\Environment\\env.properties";
+	static String filpath = System.getProperty("user.dir")+"\\Environment\\env.properties";
 	
 	public static Properties ReadEnvData() throws IOException
 	{

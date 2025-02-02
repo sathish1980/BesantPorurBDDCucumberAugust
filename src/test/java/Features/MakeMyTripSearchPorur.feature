@@ -19,7 +19,7 @@ Feature: To validate MakeMyTrip search for Flight functionality
 		Then i validate the search result displays as per the search criteria
 		And Close the browser
 		
-		Scenario Outline: To verify MakeMy Trip flight search with Valid Values with parameterized data
+	Scenario Outline: To verify MakeMy Trip flight search with Valid Values with parameterized data
 	  Given Launch the borwser and enter the URL
 		When i see a popup please close it
 		When i Select From location as follow by <from>
