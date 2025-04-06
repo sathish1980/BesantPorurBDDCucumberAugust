@@ -55,9 +55,10 @@ public class FligthSearch extends BrowserDriver{
 	}
 
 	@When("i click on SearchButton")
-	public void i_click_on_search_button() {
+	public void i_click_on_search_button() throws InterruptedException {
 		SearchPage sp = new SearchPage(browser);
 		sp.ClickOnSearch();
+		Thread.sleep(3000);
 	}
 
 	@Then("i validate the search result displays as per the search criteria")
